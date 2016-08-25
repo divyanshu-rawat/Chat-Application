@@ -29,13 +29,21 @@
         
         <div class="container" style="" >
             <div id="chat_box">
+                <?php
                 
+                    $query = "SELECT * FROM chat_info ORDER BY id DESC";
+                    $query_run   = mysqli_query($con,$query);
+//                    $query_run =$con -> query($query);
+                
+//                    $query_array = mysql_fetch_assoc($query_run)
+                    
+                    while($query_row = mysqli_fetch_assoc($query_run)):?>
                 
                 <div id ="chat_data">
                 </div>
-                <span style="color:red;">Divyanshu:</span>
-                <span style="font-family:cursive;">How are you ?</span>
-                <span style = "font-family:cursive;float:right;">12:30</span>
+                <span style="color:red;"><?php echo $query_row['name'].' : '; ?></span>
+                <span style="font-family:cursive;"><?php echo $query_row['msg']; ?></span>
+                <span style = "font-family:cursive;float:right;"><?php echo $query_row['date'] ?></span>
 <!--
                 <span></span>
                 <span></span>
@@ -43,26 +51,46 @@
                 <span></span>
                 <span></span>
 -->
-<form class="form-horizontal" style="margin-top:250px;">
-  <div class="form-group">
-    <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
-    <div class="col-sm-10">
-      <input type="email" class="form-control" id="" placeholder="Name">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-    <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-primary">Send it !</button>
-    </div>
-  </div>
-</form>
                 
+                <?php endwhile; ?>
+                
+                
+        <form class="form-horizontal" style="margin-top:250px;">
+          <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="" placeholder="Name" name ="username">
+            </div>
+          </div>
+          <div class="form-group">
+              <label for="comment" class="col-sm-2 control-label">Comment:</label>
+              <div class = "col-sm-10">
+                <textarea name = "message" class="form-control" rows="2" id="comment"></textarea>
+              </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" name = "submit" class="btn btn-primary">Send it !</button>
+            </div>
+          </div>
+        </form>
+                <?php
+                    if(isset($_POST['submit']))
+                    {
+                        $name = $_POST['name'];
+                        $message = $_POST['message'];
+                        
+                    }
+                
+                        $query = "INSERT INTO chat_info (name,msg) VALUES ('$name','$message')";
+                        $query_run = mysql_query($con,$query);
+                
+                    if($query_run)
+                    {
+                        
+                    }
+                
+                ?>
                 
             </div>
         </div>
