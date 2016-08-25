@@ -43,7 +43,7 @@
                 </div>
                 <span style="color:red;"><?php echo $query_row['name'].' : '; ?></span>
                 <span style="font-family:cursive;"><?php echo $query_row['msg']; ?></span>
-                <span style = "font-family:cursive;float:right;"><?php echo $query_row['date'] ?></span>
+                <span style = "font-family:cursive;float:right;"><?php echo formatDate($query_row['date']); ?></span>
 <!--
                 <span></span>
                 <span></span>
@@ -55,11 +55,11 @@
                 <?php endwhile; ?>
                 
                 
-        <form class="form-horizontal" style="margin-top:250px;">
+        <form method = "post" action="index.php" class="form-horizontal" style="margin-top:250px;">
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
             <div class="col-sm-10">
-              <input type="email" class="form-control" id="" placeholder="Name" name ="username">
+              <input type="text" class="form-control" id="" placeholder="Name" name ="username">
             </div>
           </div>
           <div class="form-group">
@@ -75,21 +75,21 @@
           </div>
         </form>
                 <?php
-                    if(isset($_POST['submit']))
+                    if(isset($_POST['username']) && isset($_POST['message']))
                     {
-                        $name = $_POST['name'];
+                        $name = $_POST['username'];
+//                        echo $name;
                         $message = $_POST['message'];
-                        
-                    }
+//                        echo $message;
+                        $query_1 = "INSERT INTO chat_info (name,msg) VALUES ('$name','$message')";
+                        $query_run = mysqli_query($con,$query_1);
                 
-                        $query = "INSERT INTO chat_info (name,msg) VALUES ('$name','$message')";
-                        $query_run = mysql_query($con,$query);
-                
-                    if($query_run)
-                    {
-                        
-                    }
-                
+                        if($query_run)
+                        {
+                            echo "<audio src = 'sound/button-11.wav' hidden = 'true' autoplay = 'true' /></audio>";
+                        }
+
+                   }
                 ?>
                 
             </div>
