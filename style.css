@@ -14,7 +14,7 @@ span
 #chat_box
 {
 /*    width: 90%;*/
-    height: 400px;
+    height:100%;
     margin-top: 4px;
 }
 .form-group

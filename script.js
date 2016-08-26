@@ -21,4 +21,7 @@
         }});
 
     }
+    
+    setInterval(function(){ajax();},1000);
+
             

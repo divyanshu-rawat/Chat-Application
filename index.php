@@ -36,7 +36,7 @@
         </div>
 
                 
-        <form method = "post" action="index.php" class="form-horizontal" style="margin-top:250px;">
+        <form method = "post" action="index.php" class="form-horizontal" style="margin-top:150px;">
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
             <div class="col-sm-10">
