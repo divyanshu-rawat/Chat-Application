@@ -25,35 +25,16 @@
     </head>
 
 
-    <body>
+<body onload= "ajax(); ">
+
+<div class="container" style="" >
+    <div id="chat_box">
         
-        <div class="container" style="" >
-            <div id="chat_box">
-                <?php
-                
-                    $query = "SELECT * FROM chat_info ORDER BY id DESC";
-                    $query_run   = mysqli_query($con,$query);
-//                    $query_run =$con -> query($query);
-                
-//                    $query_array = mysql_fetch_assoc($query_run)
-                    
-                    while($query_row = mysqli_fetch_assoc($query_run)):?>
-                
-                <div id ="chat_data">
-                </div>
-                <span style="color:red;"><?php echo $query_row['name'].' : '; ?></span>
-                <span style="font-family:cursive;"><?php echo $query_row['msg']; ?></span>
-                <span style = "font-family:cursive;float:right;"><?php echo formatDate($query_row['date']); ?></span>
-<!--
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
--->
-                
-                <?php endwhile; ?>
-                
+        <div id="chat">
+        
+        
+        </div>
+
                 
         <form method = "post" action="index.php" class="form-horizontal" style="margin-top:250px;">
           <div class="form-group">
@@ -86,7 +67,7 @@
                 
                         if($query_run)
                         {
-                            echo "<audio src = 'sound/button-11.wav' hidden = 'true' autoplay = 'true' /></audio>";
+                            echo "<audio src = 'sound/134332-facebook-chat-sound.mp3' hidden = 'true' autoplay = 'true' /></audio>";
                         }
 
                    }
@@ -94,8 +75,7 @@
                 
             </div>
         </div>
-        
-        
     </body>
+    <script src="script.js"></script>
 
 </html>
