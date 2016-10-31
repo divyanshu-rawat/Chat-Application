@@ -1,6 +1,6 @@
-### chat_application :speech_balloon:  :speech_balloon: 
+> chat_application :speech_balloon:  :speech_balloon: 
 
-Installation I like to use Wamp server, so I suggest installing Wamp server . Once that is installed, execute the following instructions.
+### Installation I like to use Wamp server, so I suggest installing Wamp server . Once that is installed, execute the following instructions.
 
 * Run wamp server :exclamation:.
 
