@@ -1,4 +1,8 @@
-> chat_application :speech_balloon:  :speech_balloon: 
+### For Any Query Ping Me
+
+[![Join the chat](https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg)](https://gitter.im/divyanshu001)
+
+##
 
 ### Installation I like to use Wamp server, so I suggest installing Wamp server . Once that is installed, execute the following instructions.
 
@@ -10,9 +14,15 @@
 
 * Then open your preffered browser and type localhost in address bar Hit enter :exclamation:  It will show the default page of wamp server.
 
+
+##
+
+
 Now include this index.php (my php file name) at the end of the url
 
 #### Setting Up The Database (.SQL File is present in dbase Folder)
+
+##
 
 #### Method 1 :pencil2: Using Mysql Console !
 
@@ -34,6 +44,8 @@ I like to use mysql, so I suggest installing mysql. Once that is installed, exec
 
 * mysql> source location_of_your_file;
 
+##
+
 #### Method 2 :pencil2: 
 
 * Left click on the wamp icon in system tray and run PHPMyAdmin (Access your database via PHPMyAdmin).
@@ -43,11 +55,24 @@ I like to use mysql, so I suggest installing mysql. Once that is installed, exec
 * Click Browse, locate the SQL file on your computer (it is present in sql database folder), click Open, and then click Go.
 
 
+##
 
+### Contributing
 
-I have also attached snapshot of application below !!!
+1. Create your **_branch_**: `git checkout -b my-new-feature`
 
-:speech_balloon: web-based :incoming_envelope: chat application with :sweat_smile: PHP and j Query. :date:
+2. **_Commit_** your changes: `git commit -m 'Add some feature'`
 
+3. **_Push_** to the branch: `git push origin my-new-feature`
+
+4. Send a **Pull Request**
+
+5. **_Enjoy!_**
+
+##
+
+#### Example
 
 ![alt tag](https://github.com/divyanshu-rawat/chat_application/blob/master/Screenshot%20(296).png)
+
+##
