@@ -4,7 +4,9 @@
 
 ##
 
-### Installation I like to use Wamp server, so I suggest installing Wamp server . Once that is installed, execute the following instructions.
+### Installation
+
+* I like to use Wamp server, so I suggest installing Wamp server . Once that is installed, execute the following               instructions.
 
 * Run wamp server :exclamation:.
 
@@ -12,17 +14,15 @@
 
 * Left click on the wamp icon in system tray  It will display list of options Select “start all services”.
 
-* Then open your preffered browser and type localhost in address bar Hit enter :exclamation:  It will show the default page of wamp server.
+* Then open your preffered browser and type localhost in address bar Hit enter :exclamation:  It will show the default page     of wamp server.
 
 
 ##
 
 
-Now include this index.php (my php file name) at the end of the url
+Now include this index.php (my php file name) at the end of the url.
 
 #### Setting Up The Database (.SQL File is present in dbase Folder)
-
-##
 
 #### Method 1 :pencil2: Using Mysql Console !
 
